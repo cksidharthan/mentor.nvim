@@ -1,7 +1,7 @@
 # mentor.nvim
 
 <p align="center">
-	Bring joy and reminders to your coding sessions in NeoVim
+	Make your Neovim experience more enjoyable with mentor.nvim! 😎 A Neovim plugin that displays random tips and tricks messages when you open Neovim.
 </p>
 
 <p align="center">
@@ -15,9 +15,9 @@
 
 ## 📋 Features
 
-- Display random motivational messages or tips when you open Neovim or run the command `:Mentor`.
-- Fallback to embedded messages if the external messages are not found or not valid.
-- Simple and user-friendly command to fetch a random message.
+- Display random Neovim tips and tricks messages when you open Neovim or run the command `:Mentor`.
+- Fallback to embedded messages if the external messages file are not found or not valid.
+- Simple and user-friendly command to fetch a random neovim tip or trick.
 
 ## 📚 Requirements
 
