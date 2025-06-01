@@ -35,7 +35,7 @@ use({
 	"cksidharthan/mentor.nvim",
 	config = function()
 		require("mentor").setup({
-            -- your config here
+            -- your configuration options here
         })
 	end,
 })
@@ -47,8 +47,8 @@ use({
 {
     "cksidharthan/mentor.nvim",
     config = function()
-        require("mentor").setup({
-            -- your config here
+		require("mentor").setup({
+            -- your configuration options here
         })
     end,
 }
@@ -66,18 +66,25 @@ require("mentor").setup({
         "My custom tip 2",
     },
     
-    -- Whether to use default tips provided by the plugin (default: true)
-    use_default = true, -- Set to false to only use your custom tips
+    -- Configure default tips behavior
+    defaults = {
+        enabled = true,  -- Set to false to disable all default tips
+        -- Skip specific default tips (optional)
+        skip_list = {
+            "Tip you want to exclude",
+            "Another tip to exclude",
+        }
+    }
 })
 ```
 
 #### Configuration options
 
-| Option | Description | Default |
-| --- | --- | --- |
-| `tips` | A list of tips to be displayed | `{}` |
-| `use_default` | Whether to use default tips provided by the plugin | `true` |
-
+| Option               | Description                                                                               | Type      | Default |
+| -------------------- | ----------------------------------------------------------------------------------------- | --------- | ------- |
+| `tips`               | A list of tips to be displayed                                                            | `table`   | `{}`    |
+| `defaults.enabled`   | Whether to use default tips provided by the plugin                                        | `boolean` | `true`  |
+| `defaults.skip_list` | Array of default tips to exclude from display (to ignore some tips from the default list) | `table`   | `{}`    |
 
 No additional configuration is required for basic usage. Simply install the plugin and it will display a random message on startup or when the command is invoked.
 
@@ -85,8 +92,9 @@ No additional configuration is required for basic usage. Simply install the plug
 
 - On startup, a random message will be displayed after a brief delay.
 - You can manually trigger a random message by executing `:Mentor` in command mode.
-- If use_default is false, only your custom tips defined in the setup function will be displayed.
-Feel free to customize the messages in messages.json to suit your preferences!
+- If defaults.enabled is set to true, the plugin will include default tips along with your custom tips.
+- You can exclude specific default tips using the defaults.skip_list array.
+- If defaults.enabled is false, only your custom tips defined in the setup function will be displayed.
 
 ### Contributing
 
@@ -95,4 +103,3 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 ## 📝 License
 
 This project is licensed under the MIT License.
-
