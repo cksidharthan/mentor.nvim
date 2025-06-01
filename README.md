@@ -20,10 +20,6 @@
 - Fallback to embedded messages if the external messages file are not found or not valid.
 - Simple and user-friendly command to fetch a random neovim tip or trick.
 
-## 📚 Requirements
-
-- Neovim >= 1.5.0
-
 ## 📦 Installation
 
 Install the plugin with your favorite package manager:
